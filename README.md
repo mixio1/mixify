@@ -69,7 +69,7 @@ chmod +x Mixify
 **Your listening**
 - Profile page with hours listened, plays, top 10 songs and your day streak
 - **Achievements** with progress bars, popups and sound
-- **Miximonth** (Windows only): a monthly recap in the style of Spotify Wrapped
+- **Miximonth** (Windows only): a monthly recap in the style of Spotify Wrapped (Not on linux yet)
 
 **Extras**
 - Download songs from YouTube as mp3 (see the note below)
