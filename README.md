@@ -11,23 +11,22 @@
 
 ---
 
-## Get it
+## Download
 
-Mixify for Linux is built from source with one command (no installer, nothing to set up first).
+Get the latest version from the **[Releases](../../releases/latest)** page and download the Linux file (`mixify-linux`, a `.zip` or `.tar.gz`).
+
+No installer and nothing to build: unpack it anywhere and run it.
 
 ```bash
-git clone https://github.com/mixio1/mixify-linux.git   # or unpack the zip
-cd mixify-linux
-./build.sh --install      # build and add Mixify to your app menu
-./build.sh --app          # or: build and just open it
+unzip mixify-linux.zip -d ~/Mixify      # or: tar xzf mixify-linux.tar.gz
+cd ~/Mixify
+chmod +x Mixify
+./Mixify
 ```
-
-`build.sh` installs the .NET 8 SDK into `~/.dotnet` if you don't have one (needs internet once). If the build fails, it saves the errors to `build-errors.txt`. Please attach that file to an issue.
-
-Prefer not to install anything? Every push runs the GitHub Actions build, and the finished app is attached to the run as `mixify-linux-app`.
 
 **Requirements**
 - 64-bit Linux with a desktop (X11, or Wayland through XWayland)
+- The [.NET 8 runtime](https://dotnet.microsoft.com/download/dotnet/8.0) (`dotnet-runtime-8.0` in most package managers)
 - PulseAudio or PipeWire (`libpulse0` / `pulseaudio-libs` / `libpulse`)
 - Your own music files: mp3 and wav play out of the box; flac, ogg, opus, m4a, aac, wma, aiff, mka and webm need **ffmpeg** (install it from your package manager, or Mixify can fetch it for you, see YouTube downloads)
 
@@ -75,7 +74,7 @@ Prefer not to install anything? Every push runs the GitHub Actions build, and th
 
 ## Updates
 
-New versions are published on the [Releases](../../releases) page. Mixify tells you in Settings > About > Version (and with an **Update** button in the title bar) when one is out. Pull the new source or zip and run `./build.sh --install` again. Your settings, playlists and statistics are kept in `~/.config/Mixify`, so nothing is lost.
+New versions are published on the [Releases](../../releases) page. Mixify tells you in Settings > About > Version (and with an **Update** button in the title bar) when one is out. Download the new version from Releases and replace the old files with it. Your settings, playlists and statistics are kept in `~/.config/Mixify`, so nothing is lost.
 
 ## YouTube downloads
 
